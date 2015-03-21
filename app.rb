@@ -7,21 +7,57 @@ require 'sinatra'
 set :port, 80
 set :bind, '0.0.0.0'
 
-get '/' do 
+get '/' do
+
+  # Take a photo here. 
+
+  @temperature = '22.00'
   erb :index
 end
 
-get '/led/off' do
-  # Put your command here
-  ` `
-  "the led is off"
+get '/camera' do
+	#Script to take a photo
+	erb :camera
 end
 
-get '/led/on' do
-  # Put your led on command here
-  ``
-  "the led if off"
+get '/weather' do
+	# Script to get the weather
+	@temperature = ``
+	erb :weather
+end
+
+get '/led/red/on' do
+	# turn the led on
+	redirect '/'
+end
+
+get '/led/red/off' do
+	# turn the led on
+    redirect '/'
+
+end
+
+get '/led/green/on' do
+	# turn the led on
+	redirect '/'
+
+end
+
+get '/led/green/off' do
+	# turn the led on
+	redirect '/'
+
+end
+
+get '/led/blue/on' do
+	# turn the led on
+	redirect '/'
+
 end
 
 
+get '/led/blue/off' do
+	# turn the led on
+	redirect '/'
 
+end
