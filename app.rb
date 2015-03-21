@@ -11,3 +11,17 @@ get '/' do
   erb :index
 end
 
+get '/led/off' do
+  # Put your command here
+  ` `
+  "the led is off"
+end
+
+get '/led/on' do
+  # Put your led on command here
+  ``
+  "the led if off"
+end
+
+
+
